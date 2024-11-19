@@ -1,0 +1,31 @@
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: row;
+  animation: slide 9s infinite; /* Adjust timing for each slide */
+}
+
+.testimony {
+  min-width: 100%;
+}
+
+/* Keyframes for the sliding animation */
+@keyframes slide {
+  0%,
+  33.33% {
+    transform: translateX(0);
+  }
+  33.34%,
+  66.66% {
+    transform: translateX(-100%);
+  }
+  66.67%,
+  100% {
+    transform: translateX(-200%);
+  }
+}
