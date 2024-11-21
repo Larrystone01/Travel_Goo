@@ -1,31 +1,55 @@
 .carousel {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
   overflow: hidden;
-  width: 100%;
-  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial {
+.carousel-track {
   display: flex;
-  flex-direction: row;
-  animation: slide 9s infinite; /* Adjust timing for each slide */
+  transition: transform 0.5s ease-in-out;
 }
 
-.testimony {
+.carousel-slide {
   min-width: 100%;
+  position: relative;
 }
 
-/* Keyframes for the sliding animation */
-@keyframes slide {
-  0%,
-  33.33% {
-    transform: translateX(0);
-  }
-  33.34%,
-  66.66% {
-    transform: translateX(-100%);
-  }
-  66.67%,
-  100% {
-    transform: translateX(-200%);
-  }
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dot.active {
+  background-color: #555;
 }
