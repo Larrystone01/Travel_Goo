@@ -364,10 +364,6 @@ h6 {
   font-size: 16px;
 }
 
-.area-know-more h5 {
-  /* display: inline; */
-}
-
 .steps-to-trip {
   display: flex;
   flex-direction: column;
@@ -579,4 +575,66 @@ li {
   padding: 15px 0px;
   color: #5e6282;
   font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 136px; */
+    position: relative;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .services {
+    flex-direction: column;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 6rem;
+    padding: 50px 0;
+  }
+
+  .destiny {
+    display: none;
+  }
+
+  .packages-class {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 2rem;
+  }
+  .packages-cards {
+    flex-direction: column;
+  }
+
+  .your-trip {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .subscribeSection {
+    width: 100%;
+  }
+
+  .subscribe {
+    padding: 0;
+  }
+
+  .stars {
+    display: none;
+  }
+
+  .footerSection {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* justify-content: space-evenly; */
+  }
 }
